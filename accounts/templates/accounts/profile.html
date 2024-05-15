@@ -1,5 +1,4 @@
 {% extends 'app/base.html' %}
-
 {% block content %}
 <div class="card card-profile my-5 mx-auto">
   <div class="card-body">
@@ -8,19 +7,21 @@
       <tbody>
         <tr>
           <th class="header">名前</th>
-          <td class="data">XXX</td>
+          <td class="data">
+            {{ user_data.first_name }} {{ user_data.last_name }}
+          </td>
         </tr>
         <tr>
           <th class="header">メールアドレス</th>
-          <td class="data">XXX</td>
+          <td class="data">{{ user_data.email }}</td>
         </tr>
         <tr>
           <th class="header">所属</th>
-          <td class="data">XXX</td>
+          <td class="data">{{ user_data.department }}</td>
         </tr>
         <tr>
           <th class="header">入会日</th>
-          <td class="data">XXX</td>
+          <td class="data">{{ user_data.created }}</td>
         </tr>
       </tbody>
     </table>
